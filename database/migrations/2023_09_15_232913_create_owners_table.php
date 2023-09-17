@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('cpf');
             $table->date('birthdate');
-            $table->int('adress_id');
+            $table->integer('adress_id');
             $table->string('phone');
         });
     }

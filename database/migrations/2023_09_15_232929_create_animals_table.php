@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('breed');
             $table->date('birthdate');
             $table->string('cpf');
-            $table->int('owner_id');
+            $table->integer('owner_id');
         });
     }
 

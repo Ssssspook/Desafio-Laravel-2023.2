@@ -16,12 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->text('password');
             $table->bool('isAdmin');
             $table->date('birthdate');
             $table->string('phonenumber');
-            $table->int('adress_id');
-            $table->int('worktime');
+            $table->integer('adress_id');
+            $table->integer('worktime');
             $table->rememberToken();
             $table->timestamps();
         });

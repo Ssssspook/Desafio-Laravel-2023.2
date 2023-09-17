@@ -16,9 +16,9 @@ return new class extends Migration
             $table->datetime('startDate');
             $table->datetime('endDate');
             $table->float('cost');
-            $table->int('treatment_id');
-            $table->int('user_id');
-            $table->int('animal_id');
+            $table->integer('treatment_id');
+            $table->integer('user_id');
+            $table->integer('animal_id');
             $table->timestamps();
         });
     }
