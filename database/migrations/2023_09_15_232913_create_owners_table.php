@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('cpf');
             $table->date('birthdate');
-            $table->integer('adress_id');
+            $table->foreignId("adress_id")->constrained()->onDelete("cascade");
             $table->string('phone');
         });
     }

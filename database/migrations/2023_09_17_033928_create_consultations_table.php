@@ -16,9 +16,9 @@ return new class extends Migration
             $table->datetime('startDate');
             $table->datetime('endDate');
             $table->float('cost');
-            $table->integer('treatment_id');
-            $table->integer('user_id');
-            $table->integer('animal_id');
+            $table->foreignId("treatment_id")->constrained()->onDelete("cascade");
+            $table->foreignId("user_id")->constrained()->onDelete("cascade");
+            $table->foreignId("animal_id")->constrained()->onDelete("cascade");
             $table->timestamps();
         });
     }

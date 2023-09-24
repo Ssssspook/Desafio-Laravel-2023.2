@@ -20,7 +20,7 @@ return new class extends Migration
             $table->bool('isAdmin');
             $table->date('birthdate');
             $table->string('phonenumber');
-            $table->integer('adress_id');
+            $table->foreignId("adress_id")->constrained()->onDelete("cascade");
             $table->integer('worktime');
             $table->rememberToken();
             $table->timestamps();

@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('species');
             $table->string('breed');
             $table->date('birthdate');
-            $table->string('cpf');
-            $table->integer('owner_id');
+            $table->foreignId("owner_id")->constrained()->onDelete("cascade");
         });
     }
 

@@ -22,7 +22,8 @@ class AnimalController extends Controller
      */
     public function create()
     {
-        //
+        $animal = new Animal();
+        return view('animals.create', compact('animal'));
     }
 
     /**
@@ -38,7 +39,7 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        //
+        return view('animals.show', compact('animal'));
     }
 
     /**
